@@ -173,7 +173,7 @@ if __name__ == '__main__':
         for metric in metrics:
             print(f'Reading {data} from {metric}')
 
-            main(data, metric)
+            #main(data, metric)
             try:
                 main(data, metric)
             except:
