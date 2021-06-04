@@ -1,0 +1,9 @@
+.idea
+output
+__pycache__
+*.png
+*.pyc
+roberta_mnli/self_logic/MNLI_SCORE/data/temp/cached_dev_roberta-large-mnli_128_mnli
+roberta_mnli/self_logic/MNLI_SCORE/data/temp/cached_dev_roberta-large-mnli_128_mnli-mm
+roberta_mnli/self_logic/MNLI_SCORE/data/temp/dev_mismatched.tsv
+roberta_mnli/self_logic/MNLI_SCORE/data/temp/mnli-mm_temp.pred

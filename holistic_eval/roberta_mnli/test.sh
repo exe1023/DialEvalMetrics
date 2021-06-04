@@ -1,0 +1,2 @@
+python self_logic/MNLI_SCORE/make_wordnet_para.py
+python examples/run_glue.py --model_type roberta --model_name_or_path roberta-large-mnli --task_name MNLI --do_eval --do_lower_case --data_dir examples/data/self_logic/word_net --max_seq_length 128 --per_gpu_eval_batch_size=8 --per_gpu_train_batch_size=8 --learning_rate 2e-5 --num_train_epochs 3.0 --output_dir roberta_test1 --print_result --overwrite_cache --data_dir examples/data/self_logic/baseline

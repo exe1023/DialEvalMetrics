@@ -1,0 +1,2 @@
+{"id": "na_all", "response_row": "response", "model_version": "20488119", "test_file": "~/checkpoint/dialog_metric/controllable_dialogs.csv", "score_mean": "0.89100844", "score_std": "0.2161632", "formatted": "0.89+/-0.22"}
+{"id": "na_all", "response_row": "response", "model_version": "20488119", "test_file": "~/checkpoint/dialog_metric/controllable_dialogs.csv", "score_mean": "0.89100844", "score_std": "0.2161632", "formatted": "0.89+/-0.22"}
