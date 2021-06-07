@@ -48,7 +48,29 @@ Download `context_data_release.csv` and `fluency_data_release.csv` from https://
 
 Download TopicalChat and PersonaChat data from http://shikib.com/usr 
 
-## Download Pretrained Models
+## Metric Installation
+
+For baselines, we use the [nlg-eval](https://github.com/Maluuba/nlg-eval).
+Please folloow the instruction to install it.
+
+For each dialog metrics, please follow the instructions in README in the corresponding directory.
+
+## Running Notes for Specific metrics
+
+
+### bert-as-service
+
+PredictiveEngage, BERT-RUBER and PONE requires the running bert-as-service.
+
+If you want to evaluate them, please install and run bert-as-service following the instrucitons [here](https://github.com/hanxiao/bert-as-service).
+
+We also provide a script we used to run bert-as-service `run_bert_as_service.sh`, feel free to use it.
+
+### running USR and FED
+
+We used a web server for running USR and FED in our experiments.
+
+Please run `usr_fed/usr/usr_server.py` and `usr_fed/fed/fed_server.py` to start the server, and modify the path in `usr_fed_metric.py`.
 
 
 ## How to evaluate
@@ -59,5 +81,6 @@ Download TopicalChat and PersonaChat data from http://shikib.com/usr
 
 3. Some metrics generate the output in its special format. Therefore, we should run `read_result.py` to read the results of those metrics and transform it into `outputs`
 
-4. The `outputs/METRIC/DATA/results.json` holds the prediction score of each metrics (METRIC) and qualitiy-anntoated data (DATA), while running `data_loader.py` directly in each data directory also generates the corresponding human scores. Run any analysis with the data (The jupyter notebook used in our analysis will be released) .
+4. The `outputs/METRIC/DATA/results.json` holds the prediction score of each metrics (METRIC) and qualitiy-anntoated data (DATA), while running `data_loader.py` directly in each data directory also generates the corresponding human scores. You can perform any analysis with the data (The jupyter notebook used in our analysis will be released) .
+
 

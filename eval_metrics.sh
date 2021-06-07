@@ -54,7 +54,7 @@ done
 
 
 # run ruber
-cd ${BASE}/ruber_and_bert_ruber/RUBER
+cd ${BASE}/ruber/RUBER
 conda activate ruber_eval
 for data in ${DATA[@]}
 do

@@ -10,8 +10,10 @@ def parse_args():
     return args
 
 def run(data_path, usr_target_path, fed_target_path, use_fact=False):
-    usr_server = 'http://ased-1.lti.cs.cmu.edu:10235'
-    fed_server = 'http://ased-1.lti.cs.cmu.edu:10234'
+    # Modify server path here
+    #usr_server = 'localhost:10235'
+    #fed_server = 'localhost:10234'
+
     with open(data_path) as f:
         data = json.load(f)
         

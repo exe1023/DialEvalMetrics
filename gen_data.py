@@ -12,7 +12,7 @@ from data.engage_data.data_loader import load_engage_data
 
 from maude.data_parser import gen_maude_data
 from grade.data_parser import gen_grade_data
-from ruber_and_bert_ruber.data_parser import gen_ruber_data
+from ruber.data_parser import gen_ruber_data
 from holistic_eval.data_parser import gen_hostilic_data
 from predictive_engagement.data_parser import gen_engagement_data
 from am_fm.data_parser import gen_amfm_data

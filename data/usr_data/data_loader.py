@@ -54,11 +54,11 @@ if __name__ == '__main__':
     #    for score in data['scores']:
     #        f.write(str(score))
     #        f.write('\n')
-    with open('pc_human_score.json', 'w') as f:
-        json.dump(data['scores'], f)
-    data = load_usr_data('.', 'topicalchat')
+    with open('pc_parsed.json', 'w') as f:
+        json.dump(data, f)
 
-    with open('tc_human_score.json', 'w') as f:
+    data = load_usr_data('.', 'topicalchat')
+    with open('tc_parsed.json', 'w') as f:
         json.dump(data['scores'], f)
     #print(data['contexts'][:5])
     print(data['facts'][:5])

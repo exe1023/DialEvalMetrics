@@ -5,7 +5,7 @@ from pathlib import Path
 from data.grade_data.data_loader import load_grade_data
 from maude.data_parser import read_maude_result
 from grade.data_parser import read_grade_result
-from ruber_and_bert_ruber.data_parser import read_ruber_result, read_bert_ruber_result, write_ruber_result
+from ruber.data_parser import read_ruber_result, read_bert_ruber_result, write_ruber_result
 from holistic_eval.data_parser import read_hostilic_result
 from predictive_engagement.data_parser import read_engagement_result
 from am_fm.data_parser import read_amfm_result

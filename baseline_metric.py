@@ -5,7 +5,7 @@ import json
 from collections import defaultdict
 from nlgeval import NLGEval
 from bert_score import BERTScorer
-from adam_eval.eval import eval_adam
+from adem_eval.eval import eval_adam
 from bleurt import score
 import tensorflow as tf
 
