@@ -1,4 +1,10 @@
-# Dialog Evaluation Metrics
+# A Comprehensive Assessment of Dialog Evaluation Metrics
+
+This repository contains the source code for the following paper:
+
+[A Comprehensive Assessment of Dialog Evaluation Metrics](
+    https://arxiv.org/abs/2106.03706
+)
 
 ## Prerequisties
 
@@ -318,7 +324,7 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
     </tr>
 </table>
 
-### GRADE data
+### GRADE Data
 
 <table>
     <tr>
@@ -608,7 +614,7 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
     </tr>
 </table>
 
-### DSTC6 data
+### DSTC6 Data
 
 <table>
     <tr>
@@ -927,6 +933,7 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
 
 </table>
 
+### DSTC9 Data
 
 <table>
     <tr>
