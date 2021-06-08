@@ -748,22 +748,193 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
     </tr>
 </table>
 
-### PredictiveEngage-DailyDialog, HolisticEval-DailyDialog, FED and DSTC9 data
+### PredictiveEngage-DailyDialog
 
 <table>
     <tr>
         <td></td>
         <td colspan=2>PredictiveEngage-DailyDialog</td>
-        <td colspan=2>HolisticEval-DailyDialog</td>
-        <td colspan=4>FED</td>
-        <td colspan=4>DSTC9</td>
     </tr>
     <tr>
         <td></td>
         <td colspan=2>Turn-Level</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>P</td>
+        <td>S</td>
+    </tr>
+    <tr>
+        <td>HolisticEval</td>
+        <td>0.368</td>
+        <td>0.365</td>
+    </tr>
+    <tr>
+        <td>PredictiveEngage</td>
+        <td>0.429</td>
+        <td>0.414</td>
+    </tr>
+    <tr>
+        <td>MAUDE</td>
+        <td>0.104</td>
+        <td>0.060*</td>
+    </tr>
+    <tr>
+        <td>GRADE</td>
+        <td>0.600</td>
+        <td>0.622</td>
+    </tr>
+    <tr>
+        <td>USR</td>
+        <td>0.582</td>
+        <td>0.640</td>
+    </tr>
+    <tr>
+        <td>FED</td>
+        <td>0.164</td>
+        <td>0.159</td>
+    </tr>
+    <tr>
+        <td>FlowScore</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+
+</table>
+
+
+### HolisticEval-DailyDialog
+
+<table>
+    <tr>
+        <td></td>
+        <td colspan=2>HolisticEval-DailyDialog</td>
+    </tr>
+    <tr>
+        <td></td>
         <td colspan=2>Turn-Level</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>P</td>
+        <td>S</td>
+    </tr>
+    <tr>
+        <td>HolisticEval</td>
+        <td>0.670</td>
+        <td>0.764</td> 
+    </tr>
+    <tr>
+        <td>PredictiveEngage</td>
+        <td>-0.033*</td>
+        <td>0.060*</td>
+    <tr>
+        <td>MAUDE</td>
+        <td>0.275</td>
+        <td>0.364</td>
+    </tr>
+    <tr>
+        <td>GRADE</td>
+        <td>0.678</td>
+        <td>0.697</td>
+    </tr>
+    <tr>
+        <td>USR</td>
+        <td>0.589</td>
+        <td>0.645</td>
+    </tr>
+    <tr>
+        <td>FED</td>
+        <td>0.485</td>
+        <td>0.507</td>
+    </tr>
+    <tr>
+        <td>FlowScore</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+
+</table>
+
+### FED Data
+
+<table>
+    <tr>
+        <td></td>
+        <td colspan=4>FED</td>
+    </tr>
+    <tr>
+        <td></td>
         <td colspan=2>Turn-Level</td>
         <td colspan=2>Dialog-Level</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>P</td>
+        <td>S</td>
+        <td>P</td>
+        <td>S</td>
+    </tr>
+    <tr>
+        <td>HolisticEval</td>
+        <td>0.122</td>
+        <td>0.125</td>
+        <td>-0.276</td>
+        <td>-0.304</td>
+    </tr>
+    <tr>
+        <td>PredictiveEngage</td>
+        <td>0.024*</td>
+        <td>0.094*</td>
+        <td>0.026*</td>
+        <td>0.155*</td>
+    </tr>
+    <tr>
+        <td>MAUDE</td>
+        <td>0.018*</td>
+        <td>-0.094*</td>
+        <td>-0.047*</td>
+        <td>-0.280</td>
+    </tr>
+    <tr>
+        <td>GRADE</td>
+        <td>0.134</td>
+        <td>0.118</td>
+        <td>-0.034*</td>
+        <td>-0.065*</td>
+    </tr>
+    <tr>
+        <td>USR</td>
+        <td>0.114</td>
+        <td>0.117</td>
+        <td>0.093*</td>
+        <td>0.062*</td>
+    </tr>
+    <tr>
+        <td>FED</td>
+        <td>0.120</td>
+        <td>0.095</td>
+        <td>0.222</td>
+        <td>0.320</td>
+    </tr>
+    <tr>
+        <td>FlowScore</td>
+        <td>-0.065*</td>
+        <td>-0.055*</td>
+        <td>-0.073*</td>
+        <td>-0.003*</td>
+    </tr>
+
+</table>
+
+
+<table>
+    <tr>
+        <td></td>
+        <td colspan=4>DSTC9</td>
+    </tr>
+    <tr>
+        <td></td>
         <td colspan=2>Dialog-Level</td>
         <td colspan=2>System-Level</td>
     </tr>
@@ -773,25 +944,9 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>S</td>
         <td>P</td>
         <td>S</td>
-        <td>P</td>
-        <td>S</td>
-        <td>P</td>
-        <td>S</td>
-        <td>P</td>
-        <td>S</td>
-        <td>P</td>
-        <td>S</td>
     </tr>
     <tr>
         <td>HolisticEval</td>
-        <td>0.368</td>
-        <td>0.365</td>
-        <td>0.670</td>
-        <td>0.764</td> 
-        <td>0.122</td>
-        <td>0.125</td>
-        <td>-0.276</td>
-        <td>-0.304</td>
         <td>0.015*</td>
         <td>0.002*</td>
         <td>-0.019*</td>
@@ -799,14 +954,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
     </tr>
     <tr>
         <td>PredictiveEngage</td>
-        <td>0.429</td>
-        <td>0.414</td>
-        <td>-0.033*</td>
-        <td>0.060*</td>
-        <td>0.024*</td>
-        <td>0.094*</td>
-        <td>0.026*</td>
-        <td>0.155*</td>
         <td>0.114</td>
         <td>0.115</td>
         <td>0.809</td>
@@ -814,14 +961,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
     </tr>
     <tr>
         <td>MAUDE</td>
-        <td>0.104</td>
-        <td>0.060*</td>
-        <td>0.275</td>
-        <td>0.364</td>
-        <td>0.018*</td>
-        <td>-0.094*</td>
-        <td>-0.047*</td>
-        <td>-0.280</td>
         <td>0.059</td>
         <td>0.042*</td>
         <td>0.224*</td>
@@ -829,14 +968,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
     </tr>
     <tr>
         <td>GRADE</td>
-        <td>0.600</td>
-        <td>0.622</td>
-        <td>0.678</td>
-        <td>0.697</td>
-        <td>0.134</td>
-        <td>0.118</td>
-        <td>-0.034*</td>
-        <td>-0.065*</td>
         <td>-0.078</td>
         <td>-0.070</td>
         <td>-0.674</td>
@@ -844,14 +975,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
     </tr>
     <tr>
         <td>USR</td>
-        <td>0.582</td>
-        <td>0.640</td>
-        <td>0.589</td>
-        <td>0.645</td>
-        <td>0.114</td>
-        <td>0.117</td>
-        <td>0.093*</td>
-        <td>0.062*</td>
         <td>0.019*</td>
         <td>0.020*</td>
         <td>0.149*</td>
@@ -859,14 +982,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
     </tr>
     <tr>
         <td>FED</td>
-        <td>0.164</td>
-        <td>0.159</td>
-        <td>0.485</td>
-        <td>0.507</td>
-        <td>0.120</td>
-        <td>0.095</td>
-        <td>0.222</td>
-        <td>0.320</td>
         <td>0.128</td>
         <td>0.120</td>
         <td>0.559*</td>
@@ -874,14 +989,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
     </tr>
     <tr>
         <td>FlowScore</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-        <td>-0.065*</td>
-        <td>-0.055*</td>
-        <td>-0.073*</td>
-        <td>-0.003*</td>
         <td>0.147</td>
         <td>0.140</td>
         <td>0.907</td>
