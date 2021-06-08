@@ -77,11 +77,11 @@ Please run `usr_fed/usr/usr_server.py` and `usr_fed/fed/fed_server.py` to start 
 
 ## How to evaluate
 
-1. After you downlaod all datasets, run `gen_data.py` to transform each dataset into the input format for each metrics.
+1. After you downlaod all datasets, run `gen_data.py` to transform all datasets into the input format for all metrics. If you only want to evaluate metric `metric` and dataset `dataset`, run with `gen_data.py --source_data dataset --target_format metric`
 
 2. Modify the path in `run_eval.sh` as specified in the script, since we need to activate Conda environment when running the script. Run `eval_metrics.sh` to evaluate all quality-anntoated data.
 
-3. Some metrics generate the output in its special format. Therefore, we should run `read_result.py` to read the results of those metrics and transform it into `outputs`
+3. Some metrics generate the output in its special format. Therefore, we should run `read_result.py` to read the results of those metrics and transform it into `outputs`. As step 1, you can specify the metric and data by `read_result.py --metric metric --eval_data dataset`.
 
 4. The `outputs/METRIC/DATA/results.json` holds the prediction score of each metrics (METRIC) and qualitiy-anntoated data (DATA), while running `data_loader.py` directly in each data directory also generates the corresponding human scores. You can perform any analysis with the data (The jupyter notebook used in our analysis will be released) .
 
@@ -996,3 +996,82 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
     </tr>
 
 </table>
+
+
+## How to Add New Dataset
+
+Let the name of the new dataset be `sample`
+
+Create a directory `data/sample_data`, write a function `load_sample_data` as follow:
+```
+def load_sample_data(base_dir: str):
+    '''
+    Args: 
+        base_dir: the absolute path to data/sample_data
+    Return:
+        Dict:
+        {
+            # the required items
+            'contexts' : List[List[str]], # dialog context. We split each dialog context by turns. Therefore one dialog context is in type List[str].
+            'responses': List[str], # dialog response.
+            'references': List[str], # dialog references. If no reference in the data, please still give a dummy reference like "NO REF".
+            "scores": List[float] # human scores.
+            # add any customized items
+            "Customized Item": List[str] # any additional info in the data. 
+        }
+    '''
+
+```
+
+Import the function in `gen_data.py`, and run with `python gen_data.py --source_data sample`
+
+## How to Add New Metrics
+
+Let the name of the new metric be `metric`
+
+Write a function `gen_metric_data` to transform and generate the data into the metric directory:
+
+```
+# input format 1
+def gen_metric_data(data: Dict, output_path: str):
+    '''
+    Args:
+        data: the return value of load_data functions e.g. {'contexts': ...}
+        output_path: path to the output file
+    '''
+
+# input format 2
+def gen_metric_data(data: Dict, base_dir: str, dataset: str):
+    '''
+    Args:
+        data: the return value of load_data functions e.g. {'contexts': ...}
+        base_dir: path to the output directory
+        dataset: name of the dataset
+    '''
+
+```
+
+We have two input formats. Just follow the one which is easier for you.
+
+Import the function in `gen_data.py` and follow comments in the code to add the metric.
+
+Then write a function `read_metric_result` to read the prediction of the metric:
+
+```
+def read_metric_data(data_path: str):
+    '''
+    Args:
+        data_path: path to the prediction file
+    
+    Return:
+        # You can choose to return list or dict
+        List: metric scores e.g. [0.2, 0.3, 0.4, ...]
+        or 
+        Dict: {'metric': List # metric scores}
+    '''
+
+```
+
+Import the function in `read_result.py` and follow comments in the code to add the metric.
+
+Then just follow the previous evaluation instructions to evaluate the metric.

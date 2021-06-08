@@ -62,6 +62,12 @@ def main(eval_data, metric):
         read_result = read_flowscore_result
     else:
         raise Exception
+    '''
+    Adding a new metric
+    elif metric == 'metric':
+        data_path = 'PATH/TO/OUTPUT/DIR'
+        read_result = read_metric_result # the customized function
+    '''
     
     if eval_data == 'convai2_grade':
         model_names = ['bert_ranker', 'dialogGPT', 'transformer_generator', 'transformer_ranker']
@@ -91,6 +97,7 @@ def main(eval_data, metric):
             scores = read_result(f'{data_path}/eval_personachat_usr/model')
         target_dir = f'outputs/{metric}/usr_data/personachat'
         write_result(target_dir, metric, scores)
+
     elif eval_data == 'topicalchat_usr':
         if format_type == 0:
             scores = read_result(f'{data_path}/topicalchat_usr')
@@ -98,64 +105,16 @@ def main(eval_data, metric):
             scores = read_result(f'{data_path}/eval_topicalchat_usr/model')
         target_dir = f'outputs/{metric}/usr_data/topicalchat'
         write_result(target_dir, metric, scores)
-    
-    elif eval_data == 'dstc6':
-        if format_type == 0:
-            scores = read_result(f'{data_path}/dstc6')
-        elif format_type ==1:
-            scores = read_result(f'{data_path}/eval_dstc6/model')
-        
-        target_dir = f'outputs/{metric}/dstc6_data'
-        write_result(target_dir, metric, scores)
-    
-    elif eval_data == 'fed':
-        if format_type == 0:
-            scores = read_result(f'{data_path}/fed')
-        elif format_type ==1:
-            scores = read_result(f'{data_path}/eval_fed/model')
-        
-        target_dir = f'outputs/{metric}/fed_data'
-        write_result(target_dir, metric, scores)
-    
-    elif eval_data == 'fed_dialog':
-        if format_type == 0:
-            scores = read_result(f'{data_path}/fed_dialog')
-        elif format_type ==1:
-            scores = read_result(f'{data_path}/eval_fed_dialog/model')
-        
-        target_dir = f'outputs/{metric}/fed_dialog_data'
-        write_result(target_dir, metric, scores)
 
-    elif eval_data == 'dstc9':
-        if format_type == 0:
-            scores = read_result(f'{data_path}/dstc9')
-        elif format_type ==1:
-            scores = read_result(f'{data_path}/eval_dstc9/model')
-        
-        target_dir = f'outputs/{metric}/dstc9_data'
-        write_result(target_dir, metric, scores)
-    
-    elif eval_data == 'holistic':
-        if format_type == 0:
-            scores = read_result(f'{data_path}/holistic')
-        elif format_type ==1:
-            scores = read_result(f'{data_path}/eval_holistic/model')
-        
-        target_dir = f'outputs/{metric}/holistic_data'
-        write_result(target_dir, metric, scores) 
-         
-    elif eval_data == 'engage':
-        if format_type == 0:
-            scores = read_result(f'{data_path}/engage')
-        elif format_type ==1:
-            scores = read_result(f'{data_path}/eval_engage/model')
-        
-        target_dir = f'outputs/{metric}/engage_data'
-        write_result(target_dir, metric, scores) 
-     
     else:
-        raise Exception
-         
+        if format_type == 0:
+            scores = read_result(f'{data_path}/{eval_data}')
+        elif format_type ==1:
+            scores = read_result(f'{data_path}/eval_{eval_data}/model')
+        
+        target_dir = f'outputs/{metric}/{eval_data}_data'
+        write_result(target_dir, metric, scores)
+       
 if __name__ == '__main__':
     args = parse_args()
     if args.metric is not None:

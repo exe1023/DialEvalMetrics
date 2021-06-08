@@ -9,6 +9,10 @@ from data.fed_data.data_loader import load_fed_data, load_fed_dialog_data
 from data.dstc9_data.data_loader import load_dstc9_data
 from data.holistic_data.data_loader import load_holistic_data
 from data.engage_data.data_loader import load_engage_data
+'''
+Adding new data:
+from data.data.data_laoder import load_new_data # the customized data loader function
+'''
 
 from maude.data_parser import gen_maude_data
 from grade.data_parser import gen_grade_data
@@ -29,8 +33,8 @@ def gen_baseline_data(data, data_path):
         json.dump(data, fout)
 
 def main(source_data, target_format):
-    format_type = 0
-    max_words = None
+    format_type = 0 # two types of generating data
+    max_words = None # for models using pretrained language models with input length constraint such as BERT
     if target_format == 'maude':
         metric = 'maude'
         output_dir = f'{os.getcwd()}/maude/eval_data'
@@ -61,7 +65,6 @@ def main(source_data, target_format):
         suffix = ''
     elif target_format == 'bert_ruber':
         metric = 'bert_ruber'
-        #output_dir = f'{os.getcwd()}/ruber_and_bert_ruber/BERT-RUBER/data'
         output_dir = f'{os.getcwd()}/PONE/PONE/data'
         gen_data = gen_ruber_data
         suffix = ''
@@ -86,32 +89,50 @@ def main(source_data, target_format):
         output_dir = f'{os.getcwd()}/FlowScore/eval_data'
         gen_data = gen_baseline_data
         suffix = '.json'
+    else:
+        raise Exception
+    '''
+    Adding a new metric
+    elif target_format == 'metric':
+        metirc = 'METRIC_NAME'
+        output_dir = 'PATH/TO/OUTPUT/DIR'
+        gen_data = gen_metric_data # the customized function
+        suffix = '' # the suffix of generated data
+    '''
         
-
 
     if source_data == 'convai2_grade':
         model_names = ['bert_ranker', 'dialogGPT', 'transformer_generator', 'transformer_ranker']
         for model in model_names:
             data_path = f'{os.getcwd()}/data/grade_data'
             data = load_grade_data(data_path, 'convai2', model)
-            output_path = f'{output_dir}/convai2_grade_{model}{suffix}'
-            gen_data(data, output_path)
+            if format_type == 0:
+                output_path = f'{output_dir}/convai2_grade_{model}{suffix}'
+                gen_data(data, output_path)
+            elif format_type == 1:            
+                gen_data(data, output_dir, f'{source_data}_{model}')
 
     elif source_data == 'dailydialog_grade':
         model_names = ['transformer_generator', 'transformer_ranker']
         for model in model_names:
             data_path = f'{os.getcwd()}/data/grade_data'
             data = load_grade_data(data_path, 'dailydialog', model)
-            output_path = f'{output_dir}/dailydialog_grade_{model}{suffix}'
-            gen_data(data, output_path)
+            if format_type == 0:
+                output_path = f'{output_dir}/dailydialog_grade_{model}{suffix}'
+                gen_data(data, output_path)
+            elif format_type == 1:
+                gen_data(data, output_dir, f'{source_data}_{model}')
 
     elif source_data == 'empatheticdialogues_grade':
         model_names = ['transformer_generator', 'transformer_ranker']
         for model in model_names:
             data_path = f'{os.getcwd()}/data/grade_data'
             data = load_grade_data(data_path, 'empatheticdialogues', model)
-            output_path = f'{output_dir}/empatheticdialogues_grade_{model}{suffix}'
-            gen_data(data, output_path)
+            if format_type == 0:
+                output_path = f'{output_dir}/empatheticdialogues_grade_{model}{suffix}'
+                gen_data(data, output_path)
+            elif format_type == 1:
+                gen_data(data, output_dir, f'{source_data}_{model}')
     
     elif source_data == 'personachat_usr':
         data_path = f'{os.getcwd()}/data/usr_data'
@@ -121,7 +142,7 @@ def main(source_data, target_format):
             output_path = f'{output_dir}/personachat_usr{suffix}'
             gen_data(data, output_path)
         elif format_type == 1:
-            output_path = gen_data(data, output_dir, 'personachat_usr')
+            gen_data(data, output_dir, 'personachat_usr')
     
     elif source_data == 'topicalchat_usr':
         data_path = f'{os.getcwd()}/data/usr_data'
@@ -130,25 +151,7 @@ def main(source_data, target_format):
             output_path = f'{output_dir}/topicalchat_usr{suffix}'
             gen_data(data, output_path)
         elif format_type == 1:
-            output_path = gen_data(data, output_dir, 'topicalchat_usr')
-    
-    elif source_data == 'dstc6':
-        data_path = f'{os.getcwd()}/data/dstc6_data'
-        data = load_dstc6_data(data_path)
-        if format_type == 0:
-            output_path = f'{output_dir}/dstc6{suffix}'
-            gen_data(data, output_path)
-        elif format_type == 1:
-            output_path = gen_data(data, output_dir, 'dstc6')
-    
-    elif source_data == 'fed':
-        data_path = f'{os.getcwd()}/data/fed_data'
-        data = load_fed_data(data_path)
-        if format_type == 0:
-            output_path = f'{output_dir}/fed{suffix}'
-            gen_data(data, output_path)
-        elif format_type == 1:
-            output_path = gen_data(data, output_dir, 'fed')
+            gen_data(data, output_dir, 'topicalchat_usr')
     
     elif source_data == 'fed_dialog':
         data_path = f'{os.getcwd()}/data/fed_data'
@@ -157,42 +160,24 @@ def main(source_data, target_format):
             output_path = f'{output_dir}/fed_dialog{suffix}'
             gen_data(data, output_path)
         elif format_type == 1:
-            output_path = gen_data(data, output_dir, 'fed_dialog')
-              
-    elif source_data == 'dstc9':
-        data_path = f'{os.getcwd()}/data/dstc9_data'
-        data = load_dstc9_data(data_path, max_words)
-        if format_type == 0:
-            output_path = f'{output_dir}/dstc9{suffix}'        
-            gen_data(data, output_path)
-        elif format_type == 1:
-            output_path = gen_data(data, output_dir, 'dstc9')
+            gen_data(data, output_dir, 'fed_dialog')
+    else:
+        data_path = f'{os.getcwd()}/data/{source_data}_data'
 
-    elif source_data == 'holistic':
-        data_path = f'{os.getcwd()}/data/holistic_data'
-        data = load_holistic_data(data_path)
+        data = eval(f'load_{source_data}_data')(data_path)
         if format_type == 0:
-            output_path = f'{output_dir}/holistic{suffix}'        
+            output_path = f'{output_dir}/{source_data}{suffix}'
             gen_data(data, output_path)
         elif format_type == 1:
-            output_path = gen_data(data, output_dir, 'holistic')
+            gen_data(data, output_dir, source_data)
     
-    elif source_data == 'engage':
-        data_path = f'{os.getcwd()}/data/engage_data'
-        data = load_engage_data(data_path)
-        if format_type == 0:
-            output_path = f'{output_dir}/engage{suffix}'        
-            gen_data(data, output_path)
-        elif format_type == 1:
-            output_path = gen_data(data, output_dir, 'engage')
-        
-
 if __name__ == '__main__':
     args = parse_args()
     all_data = ['convai2_grade', 'dailydialog_grade', 'empatheticdialogues_grade', 
-                'personachat_usr', 'topicalchat_usr', 'dstc6', 'fed', 'dstc9', 'engage']
+                'personachat_usr', 'topicalchat_usr', 'dstc6', 'fed', 'fed_dialog', 'holistic', 'dstc9', 'engage']
 
     if args.source_data is not None:
+        assert args.source_data in all_data
         all_data = [args.source_data]
 
     if args.target_format is not None:
