@@ -10,7 +10,7 @@ def load_usr_data(base_dir, dataset):
     with (base_dir / file).open() as f:
         data = json.load(f)
 
-    contexts, facts, responses, references, scores = [], [], [], [], []
+    contexts, facts, responses, references, scores, models = [], [], [], [], [], []
     for sample in data:
         context = sample['context']
         fact = sample['fact']
@@ -29,6 +29,7 @@ def load_usr_data(base_dir, dataset):
             facts.append(fact.strip().split('\n'))
             references.append(reference)
             responses.append(response['response'].strip())
+            models.append(response['model'])
             
             scores.append({
                 'Understandable': np.mean(response['Understandable']),
@@ -38,12 +39,14 @@ def load_usr_data(base_dir, dataset):
                 'Uses_Knowledge': np.mean(response['Uses Knowledge']),
                 'Overall': np.mean(response['Overall'])
             })
+
     return {
         'contexts': contexts,
         'facts': facts,
         'responses': responses,
         'references': references,
-        'scores': scores
+        'scores': scores,
+        'models': models
     }
 
 

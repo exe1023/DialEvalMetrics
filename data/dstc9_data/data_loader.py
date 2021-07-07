@@ -7,13 +7,14 @@ tokenizer = AutoTokenizer.from_pretrained('bert-base-cased')
 
 def load_dstc9_data(base_dir, max_words=None):
 
-    contexts, responses, references, scores = [], [], [], []
+    contexts, responses, references, scores, models = [], [], [], [], []
     path = Path(base_dir + '/data')
     for f in path.iterdir():
-        print(f)
         human_dialogues = []
         temp_score = []
         human_scores = []
+        model_name = f.name
+        print(model_name)
 
         data_human = json.load(f.open())
         for i in range(len(data_human)):
@@ -58,17 +59,19 @@ def load_dstc9_data(base_dir, max_words=None):
                 contexts.append(context)
                 responses.append(response)
                 references.append('NO REF')
+                models.append(model_name)
 
         scores.append(sum(temp_score) / len(temp_score))
 
 
     assert len(contexts) == len(responses) and len(contexts) == len(scores)
-
+    assert len(contexts) == len(models)
     return {
         'contexts': contexts,
         'responses': responses,
         'references': references,
-        'scores': scores
+        'scores': scores,
+        'models': models
     }
 
 

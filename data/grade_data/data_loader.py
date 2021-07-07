@@ -20,11 +20,20 @@ def load_grade_data(base_dir, dataset, model_name):
         for line in f.readlines():
             reference = line.strip()
             references.append(reference)
-     
+
+    scores = [] 
+    with (base_dir / 'human_score.txt').open() as f:
+        for line in f.readlines():
+            score = line.strip()
+            scores.append(score)
+
+    models = [model_name] * len(scores)
     return {
         'contexts': contexts,
         'responses': responses,
-        'references': references
+        'references': references,
+        'models': models,
+        'scores': scores
     }
 
 

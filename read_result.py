@@ -10,6 +10,11 @@ from holistic_eval.data_parser import read_hostilic_result
 from predictive_engagement.data_parser import read_engagement_result
 from am_fm.data_parser import read_amfm_result
 from FlowScore.data_parser import read_flowscore_result
+from usl_dialogue_metric.data_parser import read_usl_result
+from questeval.data_parser import read_questeval_result
+from deb.data_parser import read_deb_result
+from dynaeval.data_parser import read_dynaeval_result
+from dialogrpt.data_parser import read_dialogrpt_result
 
 def parse_args():
     parser = argparse.ArgumentParser(description='')
@@ -60,6 +65,21 @@ def main(eval_data, metric):
     elif metric == 'flowscore':
         data_path = 'FlowScore/results'
         read_result = read_flowscore_result
+    elif metric == 'usl':
+        data_path = 'usl_dialogue_metric/usl_score/datasets'
+        read_result = read_usl_result
+    elif metric == 'questeval':
+        data_path = 'questeval/outputs'
+        read_result = read_questeval_result
+    elif metric == 'deb':
+        data_path = 'deb/dataset'
+        read_result = read_deb_result
+    elif metric == 'dynaeval':
+        data_path = 'dynaeval/data'
+        read_result = read_dynaeval_result
+    elif metric == 'dialogrpt':
+        data_path = 'dialogrpt/test_data'
+        read_result = read_dialogrpt_result
     else:
         raise Exception
     '''
@@ -120,19 +140,20 @@ if __name__ == '__main__':
     if args.metric is not None:
         metrics = [args.metric]
     else:
-        metrics = ['maude', 'grade', 'ruber', 'bert_ruber', 'holistic', 'predictive_engagement', 'amfm', 'flowscore']
+        metrics = ['maude', 'grade', 'ruber', 'bert_ruber', 'holistic', 'predictive_engagement', 'amfm', 'flowscore',
+        'usl', 'questeval', 'dialogrpt']
     
     if args.eval_data is not None:
         eval_data = [args.eval_data]
     else:
         eval_data = ['convai2_grade', 'dailydialog_grade', 'empatheticdialogues_grade',
-                    'personachat_usr', 'topicalchat_usr', 'dstc6', 'fed', 'dstc9', 'engage', 'fed_dialog']
+                    'personachat_usr', 'topicalchat_usr', 'dstc6', 'fed', 'dstc9', 'engage', 'fed_dialog', 'holistic']
 
     for data in eval_data:
         for metric in metrics:
             print(f'Reading {data} from {metric}')
 
-            #main(data, metric)
+            main(data, metric)
             try:
                 main(data, metric)
             except:

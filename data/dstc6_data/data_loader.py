@@ -16,6 +16,7 @@ def parse_dialog(dialog):
     responses = []
     references = []
     scores = []
+    models = []
 
     context = []
     response_raw = []
@@ -33,7 +34,7 @@ def parse_dialog(dialog):
     reference_split = reference_raw.strip().split()
     reference = ' '.join(reference_split[2:])
 
-    for r_raw in response_raw[:-1]:
+    for idx, r_raw in enumerate(response_raw[:-1]):
         response_split = r_raw.strip().split()
         score = json.loads(response_split[1])
         response = ' '.join(response_split[2:])
@@ -44,21 +45,23 @@ def parse_dialog(dialog):
         responses.append(response)
         references.append(reference)
         scores.append(np.mean(score))
-    return contexts, responses, references, scores
+        models.append(f'system{idx}')
+    return contexts, responses, references, scores, models
 
 
 def load_dstc6_data(base_dir):
 
-    contexts, responses, references, scores = [], [], [], []
+    contexts, responses, references, scores, models = [], [], [], [], []
     with open(f'{base_dir}/human_rating_scores.txt') as f:
         dialog = []
         for line in f.readlines():
             if line.strip() == '':
-                ctx, res, ref, sc = parse_dialog(dialog)
+                ctx, res, ref, sc, md = parse_dialog(dialog)
                 contexts.extend(ctx)
                 responses.extend(res)
                 references.extend(ref)
                 scores.extend(sc)
+                models.extend(md)
 
                 dialog = []
             else:
@@ -69,7 +72,8 @@ def load_dstc6_data(base_dir):
         'contexts': contexts,
         'responses': responses,
         'references': references,
-        'scores': scores
+        'scores': scores,
+        'models': models
     }
 
 if __name__ == '__main__':

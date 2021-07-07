@@ -20,6 +20,11 @@ from ruber.data_parser import gen_ruber_data
 from holistic_eval.data_parser import gen_hostilic_data
 from predictive_engagement.data_parser import gen_engagement_data
 from am_fm.data_parser import gen_amfm_data
+from usl_dialogue_metric.data_parser import gen_usl_data
+from deb.data_parser import gen_deb_data
+from dynaeval.data_parser import gen_dynaeval_data
+from fbd.data_parser import gen_fbd_data
+from dialogrpt.data_parser import gen_dialogrpt_data
 
 def parse_args():
     parser = argparse.ArgumentParser(description='')
@@ -84,11 +89,41 @@ def main(source_data, target_format):
         output_dir = f'{os.getcwd()}/am_fm/examples/dstc6/test_data'
         gen_data = gen_amfm_data
         suffix = ''
-    elif target_format == 'flow':
-        metric = 'flow'
+    elif target_format == 'flowscore':
+        metric = 'flowscore'
         output_dir = f'{os.getcwd()}/FlowScore/eval_data'
         gen_data = gen_baseline_data
         suffix = '.json'
+    elif target_format == 'usl':
+        metric = 'usl'
+        output_dir = f'{os.getcwd()}/usl_dialogue_metric/usl_score/datasets'
+        gen_data = gen_usl_data
+        suffix = ''
+    elif target_format == 'questeval':
+        metric = 'questeval'
+        output_dir = f'{os.getcwd()}/questeval/test_data'
+        gen_data = gen_baseline_data
+        suffix = '.json'
+    elif target_format == 'deb':
+        metric = 'deb'
+        output_dir = f'{os.getcwd()}/deb/dataset'
+        gen_data = gen_deb_data
+        suffix = ''
+    elif target_format == 'dynaeval':
+        metric = 'dynaeval'
+        output_dir = f'{os.getcwd()}/dynaeval/data'
+        gen_data = gen_dynaeval_data
+        suffix = ''
+    elif target_format == 'fbd':
+        metric = 'fbd'
+        output_dir = f'{os.getcwd()}/fbd/datasets'
+        gen_data = gen_fbd_data
+        suffix = ''
+    elif target_format == 'dialogrpt':
+        metric = 'dialogrpt'
+        output_dir = f'{os.getcwd()}/dialogrpt/test_data'
+        gen_data = gen_dialogrpt_data
+        suffix = '' 
     else:
         raise Exception
     '''
@@ -183,7 +218,8 @@ if __name__ == '__main__':
     if args.target_format is not None:
         metrics = [args.target_format]
     else:
-        metrics = ['maude', 'hostilic', 'baseline', 'usr_fed', 'ruber', 'bert_ruber', 'grade', 'predictive_engagement', 'amfm', 'flow']
+        metrics = ['maude', 'hostilic', 'baseline', 'usr_fed', 'ruber', 'bert_ruber', 'grade', 'predictive_engagement', 'amfm', 'flowscore',
+                  'usl', 'questeval', 'deb', 'dynaeval', 'dialogrpt']
 
     for data in all_data:
         for target in metrics:
