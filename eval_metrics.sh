@@ -4,7 +4,56 @@ source /path/to/conda/etc/profile.d/conda.sh
 BASE=`pwd`
 
 # please specify the dataset you want to test here
-DATA=(personachat_usr topicalchat_usr convai2_grade_bert_ranker convai2_grade_transformer_generator dailydialog_grade_transformer_ranker empatheticdialogues_grade_transformer_ranker convai2_grade_dialogGPT convai2_grade_transformer_ranker dailydialog_grade_transformer_generator  empatheticdialogues_grade_transformer_generator fed dstc6 dstc9 fed_dialog)
+DATA=(personachat_usr topicalchat_usr convai2_grade_bert_ranker convai2_grade_transformer_generator dailydialog_grade_transformer_ranker empatheticdialogues_grade_transformer_ranker convai2_grade_dialogGPT convai2_grade_transformer_ranker dailydialog_grade_transformer_generator  empatheticdialogues_grade_transformer_generator fed dstc6 dstc9 fed_dialog engage holistic)
+
+cd ${BASE}/dialogrpt
+conda activate dialogrpt
+for data in ${DATA[@]}
+do
+    echo "Eval dialogrpt $data"
+    bash eval.sh $data
+done
+
+cd ${BASE}/fbd
+conda activate eval_base
+for data in ${DATA[@]}
+do
+    echo "Eval fbd $data"
+    bash eval.sh $data
+done
+
+cd ${BASE}/dynaeval
+conda activate gcn
+for data in ${DATA[@]}
+do
+    echo "Eval dynaeval $data"
+    bash score.sh $data
+done
+
+cd ${BASE}/deb
+conda activate ruber_eval
+for data in ${DATA[@]}
+do
+    echo "Eval deb $data"
+    bash run_deb.sh $data
+done
+
+cd ${BASE}/questeval
+conda activate questeval
+for data in ${DATA[@]}
+do
+    echo "Eval questeval $data"
+    python eval.py --data $data
+done
+
+cd ${BASE}/usl_dialogue_metric/usl_score
+conda activate usl_eval
+for data in ${DATA[@]}
+do
+    echo "Eval usl $data"
+    bash eval_single.sh $data
+done
+
 
 cd ${BASE}/FlowScore/
 conda activate flow_eval
@@ -45,7 +94,7 @@ done
 
 # run baseline
 cd ${BASE}
-conda activate research
+conda activate eval_base
 for data in ${DATA[@]}
 do
     echo "Eval Baseline $data"
