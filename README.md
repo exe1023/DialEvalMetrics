@@ -202,6 +202,17 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.000*</td>
     </tr>
     <tr>
+        <td>QuestEval</td>
+        <td>0.300</td>
+        <td>0.338</td>
+        <td>0.943</td>
+        <td>1.000</td>
+        <td>0.176</td>
+        <td>0.236</td>
+        <td>0.885*</td>
+        <td>1.000</td>
+    </tr>
+    <tr>
         <td>RUBER</td>
         <td>0.247</td>
         <td>0.259</td>
@@ -235,6 +246,94 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.800*</td>
     </tr>
     <tr>
+        <td>MAUDE</td>
+        <td>0.044*</td>
+        <td>0.083*</td>
+        <td>0.317*</td>
+        <td>-0.200*</td>
+        <td>0.345</td>
+        <td>0.298</td>
+        <td>0.440*</td>
+        <td>0.400*</td>
+    </tr>
+    <tr>
+        <td>DEB</td>
+        <td>0.180</td>
+        <td>0.116</td>
+        <td>0.818*</td>
+        <td>0.400*</td>
+        <td>0.291</td>
+        <td>0.373</td>
+        <td>0.989</td>
+        <td>1.000</td>
+    </tr>
+    <tr>
+        <td>GRADE</td>
+        <td>0.200</td>
+        <td>0.217</td>
+        <td>0.553*</td>
+        <td>0.100*</td>
+        <td>0.358</td>
+        <td>0.352</td>
+        <td>0.811*</td>
+        <td>1.000</td>
+    </tr>
+     <tr>
+        <td>DynaEval</td>
+        <td>-0.032*</td>
+        <td>-0.022*</td>
+        <td>-0.248*</td>
+        <td>0.100*</td>
+        <td>0.149</td>
+        <td>0.171</td>
+        <td>0.584*</td>
+        <td>0.800*</td>
+    </tr>
+    <tr>
+        <td>USR</td>
+        <td>0.412</td>
+        <td>0.423</td>
+        <td>0.967</td>
+        <td>0.900</td>
+        <td>0.440</td>
+        <td>0.418</td>
+        <td>0.864*</td>
+        <td>1.000</td>
+    </tr>
+    <tr>
+        <td>USL-H</td>
+        <td>0.322</td>
+        <td>0.340</td>
+        <td>0.966</td>
+        <td>0.900</td>
+        <td>0.495</td>
+        <td>0.523</td>
+        <td>0.969</td>
+        <td>0.800*</td>
+    </tr>
+    <tr>
+        <td>DialogRPT</td>
+        <td>0.120</td>
+        <td>0.105*</td>
+        <td>0.944</td>
+        <td>0.600*</td>
+        <td>-0.064*</td>
+        <td>-0.083*</td>
+        <td>0.347*</td>
+        <td>0.800*</td>
+    </tr>
+    <tr>
+        <td>Deep AM-FM</td>
+        <td>0.285</td>
+        <td>0.268</td>
+        <td>0.969</td>
+        <td>0.700*</td>
+        <td>0.228</td>
+        <td>0.219</td>
+        <td>0.965</td>
+        <td>1.000</td>
+    </tr>
+    <tr>
         <td>HolisticEval</td>
         <td>-0.147</td>
         <td>-0.123</td>
@@ -257,39 +356,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.200*</td>
     </tr>
     <tr>
-        <td>MAUDE</td>
-        <td>0.044*</td>
-        <td>0.083*</td>
-        <td>0.317*</td>
-        <td>-0.200*</td>
-        <td>0.345</td>
-        <td>0.298</td>
-        <td>0.440*</td>
-        <td>0.400*</td>
-    </tr>
-    <tr>
-        <td>GRADE</td>
-        <td>0.200</td>
-        <td>0.217</td>
-        <td>0.553*</td>
-        <td>0.100*</td>
-        <td>0.358</td>
-        <td>0.352</td>
-        <td>0.811*</td>
-        <td>1.000</td>
-    </tr>
-    <tr>
-        <td>USR</td>
-        <td>0.412</td>
-        <td>0.423</td>
-        <td>0.967</td>
-        <td>0.900</td>
-        <td>0.440</td>
-        <td>0.418</td>
-        <td>0.864*</td>
-        <td>1.000</td>
-    </tr>
-    <tr>
         <td>FED</td>
         <td>-0.124</td>
         <td>-0.135</td>
@@ -301,17 +367,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.400*</td>
     </tr>
     <tr>
-        <td>Deep AM-FM</td>
-        <td>0.285</td>
-        <td>0.268</td>
-        <td>0.969</td>
-        <td>0.700*</td>
-        <td>0.228</td>
-        <td>0.219</td>
-        <td>0.965</td>
-        <td>1.000</td>
-    </tr>
-    <tr>
         <td>FlowScore</td>
         <td>0.095*</td>
         <td>0.082*</td>
@@ -320,6 +375,17 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.118*</td>
         <td>0.079*</td>
         <td>0.678*</td>
+        <td>0.800*</td>
+    </tr>
+    <tr>
+        <td>FBD</td>
+        <td>-</td>
+        <td>-</td>
+        <td>0.916</td>
+        <td>0.100*</td>
+        <td>-</td>
+        <td>-</td>
+        <td>0.644*</td>
         <td>0.800*</td>
     </tr>
 </table>
@@ -448,6 +514,21 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>1.000</td>
     </tr>
     <tr>
+        <td>QuestEval</td>
+        <td>0.279</td>
+        <td>0.319</td>
+        <td>0.283*</td>
+        <td>0.400*</td>
+        <td>0.020*</td>
+        <td>0.006*</td>
+        <td>-1.000*</td>
+        <td>-1.000</td>
+        <td>0.201</td>
+        <td>0.272</td>
+        <td>1.000*</td>
+        <td>1.000</td>
+    </tr>
+    <tr>
         <td>RUBER</td>
         <td>-0.027*</td>
         <td>-0.042*</td>
@@ -492,6 +573,126 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>1.000*</td>
         <td>1.000</td>
     </tr>
+        <tr>
+        <td>MAUDE</td>
+        <td>0.351</td>
+        <td>0.304</td>
+        <td>0.748*</td>
+        <td>0.800*</td>
+        <td>-0.036*</td>
+        <td>-0.073*</td>
+        <td>1.000*</td>
+        <td>1.000</td>
+        <td>0.007*</td>
+        <td>-0.057*</td>
+        <td>1.000*</td>
+        <td>1.000</td>
+    </tr>
+     <tr>
+        <td>DEB</td>
+        <td>0.426</td>
+        <td>0.504</td>
+        <td>0.995</td>
+        <td>1.000</td>
+        <td>0.337</td>
+        <td>0.363</td>
+        <td>1.000*</td>
+        <td>1.000</td>
+        <td>0.356</td>
+        <td>0.395</td>
+        <td>1.000*</td>
+        <td>1.000</td>
+    </tr>
+    <tr>
+        <td>GRADE</td>
+        <td>0.566</td>
+        <td>0.571</td>
+        <td>0.883*</td>
+        <td>0.800*</td>
+        <td>0.278</td>
+        <td>0.253</td>
+        <td>-1.000*</td>
+        <td>-1.000</td>
+        <td>0.330</td>
+        <td>0.297</td>
+        <td>1.000*</td>
+        <td>1.000</td>
+    </tr>
+    <tr>
+        <td>DynaEval</td>
+        <td>0.138</td>
+        <td>0.131</td>
+        <td>-0.996</td>
+        <td>-1.000</td>
+        <td>0.108*</td>
+        <td>0.120</td>
+        <td>-1.000*</td>
+        <td>-1.000</td>
+        <td>0.146</td>
+        <td>0.141</td>
+        <td>-1.000*</td>
+        <td>-1.000</td>
+    </tr>
+    <tr>
+        <td>USR</td>
+        <td>0.501</td>
+        <td>0.500</td>
+        <td>0.995</td>
+        <td>1.000</td>
+        <td>0.057*</td>
+        <td>0.057*</td>
+        <td>-1.000*</td>
+        <td>-1.000</td>
+        <td>0.264</td>
+        <td>0.255</td>
+        <td>1.000*</td>
+        <td>1.000</td>
+    </tr>
+    <tr>
+        <td>USL-H</td>
+        <td>0.443</td>
+        <td>0.457</td>
+        <td>0.971</td>
+        <td>1.000</td>
+        <td>0.108*</td>
+        <td>0.093*</td>
+        <td>-1.000*</td>
+        <td>-1.000</td>
+        <td>0.293</td>
+        <td>0.235</td>
+        <td>1.000*</td>
+        <td>1.000</td>
+    </tr>
+    <tr>
+        <td>DialogRPT</td>
+        <td>0.137</td>
+        <td>0.158</td>
+        <td>-0.311*</td>
+        <td>-0.600*</td>
+        <td>-0.000*</td>
+        <td>0.037*</td>
+        <td>-1.000*</td>
+        <td>-1.000</td>
+        <td>0.211</td>
+        <td>0.203</td>
+        <td>1.000*</td>
+        <td>1.000</td>
+    </tr>
+    <tr>
+        <td>Deep AM-FM</td>
+        <td>0.117</td>
+        <td>0.130</td>
+        <td>0.774*</td>
+        <td>0.400*</td>
+        <td>0.026*</td>
+        <td>0.022*</td>
+        <td>1.000*</td>
+        <td>1.000</td>
+        <td>0.083*</td>
+        <td>0.058*</td>
+        <td>1.000*</td>
+        <td>1.000</td>
+    </tr>
     <tr>
         <td>HolisticEval</td>
         <td>-0.030*</td>
@@ -523,51 +724,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>1.000</td>
     </tr>
     <tr>
-        <td>MAUDE</td>
-        <td>0.351</td>
-        <td>0.304</td>
-        <td>0.748*</td>
-        <td>0.800*</td>
-        <td>-0.036*</td>
-        <td>-0.073*</td>
-        <td>1.000*</td>
-        <td>1.000</td>
-        <td>0.007*</td>
-        <td>-0.057*</td>
-        <td>1.000*</td>
-        <td>1.000</td>
-    </tr>
-    <tr>
-        <td>GRADE</td>
-        <td>0.566</td>
-        <td>0.571</td>
-        <td>0.883*</td>
-        <td>0.800*</td>
-        <td>0.278</td>
-        <td>0.253</td>
-        <td>-1.000*</td>
-        <td>-1.000</td>
-        <td>0.330</td>
-        <td>0.297</td>
-        <td>1.000*</td>
-        <td>1.000</td>
-    </tr>
-    <tr>
-        <td>USR</td>
-        <td>0.501</td>
-        <td>0.500</td>
-        <td>0.995</td>
-        <td>1.000</td>
-        <td>0.057*</td>
-        <td>0.057*</td>
-        <td>-1.000*</td>
-        <td>-1.000</td>
-        <td>0.264</td>
-        <td>0.255</td>
-        <td>1.000*</td>
-        <td>1.000</td>
-    </tr>
-    <tr>
         <td>FED</td>
         <td>-0.090</td>
         <td>-0.072*</td>
@@ -579,21 +735,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>1.000</td>
         <td>-0.014*</td>
         <td>-0.044*</td>
-        <td>1.000*</td>
-        <td>1.000</td>
-    </tr>
-    <tr>
-        <td>Deep AM-FM</td>
-        <td>0.117</td>
-        <td>0.130</td>
-        <td>0.774*</td>
-        <td>0.400*</td>
-        <td>0.026*</td>
-        <td>0.022*</td>
-        <td>1.000*</td>
-        <td>1.000</td>
-        <td>0.083*</td>
-        <td>0.058*</td>
         <td>1.000*</td>
         <td>1.000</td>
     </tr>
@@ -611,6 +752,21 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>-</td>
         <td>-</td>
         <td>-</td>
+    </tr>
+        <tr>
+        <td>FBD</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-0.235*</td>
+        <td>-0.400*</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-1.000*</td>
+        <td>-1.000</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-1.000*</td>
+        <td>-1.000</td>
     </tr>
 </table>
 
@@ -675,6 +831,13 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.213*</td>
         <td>0.426*</td>
     </tr>
+       <tr>
+        <td>QuestEval</td>
+        <td>0.188</td>
+        <td>0.242</td>
+        <td>-0.215*</td>
+        <td>0.206*</td>
+    </tr>
     <tr>
         <td>RUBER</td>
         <td>0.114</td>
@@ -697,6 +860,62 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.235*</td>
     </tr>
     <tr>
+        <td>MAUDE</td>
+        <td>0.195</td>
+        <td>0.128</td>
+        <td>0.739</td>
+        <td>0.217*</td>
+    </tr>
+        <tr>
+        <td>DEB</td>
+        <td>0.211</td>
+        <td>0.214</td>
+        <td>-0.261*</td>
+        <td>0.492</td>
+    </tr>
+    <tr>
+        <td>GRADE</td>
+        <td>0.119</td>
+        <td>0.122</td>
+        <td>0.784</td>
+        <td>0.611</td>
+    </tr>
+        <tr>
+        <td>DynaEval</td>
+        <td>0.286</td>
+        <td>0.246</td>
+        <td>0.342*</td>
+        <td>-0.050*</td>
+    </tr>
+    <tr>
+        <td>USR</td>
+        <td>0.184</td>
+        <td>0.166</td>
+        <td>0.432*</td>
+        <td>0.147*</td>
+    </tr>
+       <tr>
+        <td>USL-H</td>
+        <td>0.217</td>
+        <td>0.179</td>
+        <td>0.811</td>
+        <td>0.298*</td>
+    </tr>
+    <tr>
+        <td>DialogRPT</td>
+        <td>0.170</td>
+        <td>0.155</td>
+        <td>0.567</td>
+        <td>0.334*</td>
+    </tr>
+        <tr>
+        <td>Deep AM-FM</td>
+        <td>0.326</td>
+        <td>0.295</td>
+        <td>0.817</td>
+        <td>0.674</td>
+    </tr>
+    <tr>
         <td>HolisticEval</td>
         <td>0.001*</td>
         <td>-0.004*</td>
@@ -711,27 +930,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>-0.409*</td>
     </tr>
     <tr>
-        <td>MAUDE</td>
-        <td>0.195</td>
-        <td>0.128</td>
-        <td>0.739</td>
-        <td>0.217*</td>
-    </tr>
-    <tr>
-        <td>GRADE</td>
-        <td>0.119</td>
-        <td>0.122</td>
-        <td>0.784</td>
-        <td>0.611</td>
-    </tr>
-    <tr>
-        <td>USR</td>
-        <td>0.184</td>
-        <td>0.166</td>
-        <td>0.432*</td>
-        <td>0.147*</td>
-    </tr>
-    <tr>
         <td>FED</td>
         <td>-0.106</td>
         <td>-0.083</td>
@@ -739,18 +937,18 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.322*</td>
     </tr>
     <tr>
-        <td>Deep AM-FM</td>
-        <td>0.326</td>
-        <td>0.295</td>
-        <td>0.817</td>
-        <td>0.674</td>
-    </tr>
-    <tr>
         <td>FlowScore</td>
         <td>0.064</td>
         <td>0.095</td>
         <td>0.352*</td>
         <td>0.362*</td>
+    </tr>
+        <tr>
+        <td>FBD</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-0.481</td>
+        <td>-0.234*</td>
     </tr>
 </table>
 
@@ -770,6 +968,46 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>P</td>
         <td>S</td>
     </tr>
+        <tr>
+        <td>QuestEval</td>
+        <td>0.296</td>
+        <td>0.341</td>
+    </tr>
+        <tr>
+        <td>MAUDE</td>
+        <td>0.104</td>
+        <td>0.060*</td>
+    </tr>
+    <tr>
+        <td>DEB</td>
+        <td>0.516</td>
+        <td>0.580</td>
+    </tr> 
+    <tr>
+        <td>GRADE</td>
+        <td>0.600</td>
+        <td>0.622</td>
+    </tr>
+    <tr>
+        <td>DynaEval</td>
+        <td>0.167</td>
+        <td>0.160</td>
+    </tr>
+    <tr>
+        <td>USR</td>
+        <td>0.582</td>
+        <td>0.640</td>
+    </tr>
+    <tr>
+        <td>USL-H</td>
+        <td>0.688</td>
+        <td>0.699</td>
+    </tr>
+    <tr>
+        <td>DialogRPT</td>
+        <td>0.489</td>
+        <td>0.533</td>
+    </tr>
     <tr>
         <td>HolisticEval</td>
         <td>0.368</td>
@@ -781,27 +1019,17 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.414</td>
     </tr>
     <tr>
-        <td>MAUDE</td>
-        <td>0.104</td>
-        <td>0.060*</td>
-    </tr>
-    <tr>
-        <td>GRADE</td>
-        <td>0.600</td>
-        <td>0.622</td>
-    </tr>
-    <tr>
-        <td>USR</td>
-        <td>0.582</td>
-        <td>0.640</td>
-    </tr>
-    <tr>
         <td>FED</td>
         <td>0.164</td>
         <td>0.159</td>
     </tr>
     <tr>
         <td>FlowScore</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>FBD</td>
         <td>-</td>
         <td>-</td>
     </tr>
@@ -826,18 +1054,19 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>S</td>
     </tr>
     <tr>
-        <td>HolisticEval</td>
-        <td>0.670</td>
-        <td>0.764</td> 
+        <td>QuestEval</td>
+        <td>0.285</td>
+        <td>0.260</td>
     </tr>
-    <tr>
-        <td>PredictiveEngage</td>
-        <td>-0.033*</td>
-        <td>0.060*</td>
     <tr>
         <td>MAUDE</td>
         <td>0.275</td>
         <td>0.364</td>
+    </tr>
+    <tr>
+        <td>DEB</td>
+        <td>0.584</td>
+        <td>0.663</td>
     </tr>
     <tr>
         <td>GRADE</td>
@@ -845,9 +1074,34 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.697</td>
     </tr>
     <tr>
+        <td>DynaEval</td>
+        <td>-0.023*</td>
+        <td>-0.009*</td>
+    </tr>
+    <tr>
         <td>USR</td>
         <td>0.589</td>
         <td>0.645</td>
+    </tr>
+    <tr>
+        <td>USL-H</td>
+        <td>0.486</td>
+        <td>0.537</td>
+    </tr>
+    <tr>
+        <td>DialogRPT</td>
+        <td>0.283</td>
+        <td>0.332</td>
+    </tr>
+    <tr>
+        <td>HolisticEval</td>
+        <td>0.670</td>
+        <td>0.764</td>
+    </tr>
+    <tr>
+        <td>PredictiveEngage</td>
+        <td>-0.033*</td>
+        <td>0.060*</td>
     </tr>
     <tr>
         <td>FED</td>
@@ -856,6 +1110,11 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
     </tr>
     <tr>
         <td>FlowScore</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>FBD</td>
         <td>-</td>
         <td>-</td>
     </tr>
@@ -882,6 +1141,62 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>S</td>
     </tr>
     <tr>
+        <td>QuestEval</td>
+        <td>0.037*</td>
+        <td>0.093*</td>
+        <td>-0.032*</td>
+        <td>0.080*</td>
+    </tr>
+    <tr>
+        <td>MAUDE</td>
+        <td>0.018*</td>
+        <td>-0.094*</td>
+        <td>-0.047*</td>
+        <td>-0.280</td>
+    </tr>
+    <tr>
+        <td>DEB</td>
+        <td>0.230</td>
+        <td>0.187</td>
+        <td>-0.130*</td>
+        <td>0.006*</td>
+    </tr>
+    <tr>
+        <td>GRADE</td>
+        <td>0.134</td>
+        <td>0.118</td>
+        <td>-0.034*</td>
+        <td>-0.065*</td>
+    </tr>
+    <tr>
+        <td>DynaEval</td>
+        <td>0.319</td>
+        <td>0.323</td>
+        <td>0.503</td>
+        <td>0.547</td>
+    </tr>
+    <tr>
+        <td>USR</td>
+        <td>0.114</td>
+        <td>0.117</td>
+        <td>0.093*</td>
+        <td>0.062*</td>
+    </tr>
+    <tr>
+        <td>USL-H</td>
+        <td>0.201</td>
+        <td>0.189</td>
+        <td>0.073*</td>
+        <td>0.152*</td>
+    </tr>
+    <tr>
+        <td>DialogRPT</td>
+        <td>-0.118</td>
+        <td>-0.086*</td>
+        <td>-0.221</td>
+        <td>-0.214</td>
+    </tr>
+    <tr>
         <td>HolisticEval</td>
         <td>0.122</td>
         <td>0.125</td>
@@ -894,27 +1209,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.094*</td>
         <td>0.026*</td>
         <td>0.155*</td>
-    </tr>
-    <tr>
-        <td>MAUDE</td>
-        <td>0.018*</td>
-        <td>-0.094*</td>
-        <td>-0.047*</td>
-        <td>-0.280</td>
-    </tr>
-    <tr>
-        <td>GRADE</td>
-        <td>0.134</td>
-        <td>0.118</td>
-        <td>-0.034*</td>
-        <td>-0.065*</td>
-    </tr>
-    <tr>
-        <td>USR</td>
-        <td>0.114</td>
-        <td>0.117</td>
-        <td>0.093*</td>
-        <td>0.062*</td>
     </tr>
     <tr>
         <td>FED</td>
@@ -930,7 +1224,13 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>-0.073*</td>
         <td>-0.003*</td>
     </tr>
-
+    <tr>
+        <td>FBD</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
 </table>
 
 ### DSTC9 Data
@@ -953,6 +1253,62 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>S</td>
     </tr>
     <tr>
+        <td>QuestEval</td>
+        <td>0.026*</td>
+        <td>0.043</td>
+        <td>0.604</td>
+        <td>0.527*</td>
+    </tr>
+    <tr>
+        <td>MAUDE</td>
+        <td>0.059</td>
+        <td>0.042*</td>
+        <td>0.224*</td>
+        <td>0.045*</td>
+    </tr>
+    <tr>
+        <td>DEB</td>
+        <td>0.085</td>
+        <td>0.131</td>
+        <td>0.683</td>
+        <td>0.473*</td>
+    </tr>
+    <tr>
+        <td>GRADE</td>
+        <td>-0.078</td>
+        <td>-0.070</td>
+        <td>-0.674</td>
+        <td>-0.482*</td>
+    </tr>
+    <tr>
+        <td>DynaEval</td>
+        <td>0.093</td>
+        <td>0.101</td>
+        <td>0.652</td>
+        <td>0.727</td>
+    </tr>
+    <tr>
+        <td>USR</td>
+        <td>0.019*</td>
+        <td>0.020*</td>
+        <td>0.149*</td>
+        <td>0.127*</td>
+    </tr>
+    <tr>
+        <td>USL-H</td>
+        <td>0.105</td>
+        <td>0.105</td>
+        <td>0.566*</td>
+        <td>0.755</td>
+    </tr>
+    <tr>
+        <td>DialogRPT</td>
+        <td>0.076</td>
+        <td>0.069</td>
+        <td>0.685</td>
+        <td>0.555*</td>
+    </tr>
+    <tr>
         <td>HolisticEval</td>
         <td>0.015*</td>
         <td>0.002*</td>
@@ -967,27 +1323,6 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.664</td>
     </tr>
     <tr>
-        <td>MAUDE</td>
-        <td>0.059</td>
-        <td>0.042*</td>
-        <td>0.224*</td>
-        <td>0.045*</td>
-    </tr>
-    <tr>
-        <td>GRADE</td>
-        <td>-0.078</td>
-        <td>-0.070</td>
-        <td>-0.674</td>
-        <td>-0.482*</td>
-    </tr>
-    <tr>
-        <td>USR</td>
-        <td>0.019*</td>
-        <td>0.020*</td>
-        <td>0.149*</td>
-        <td>0.127*</td>
-    </tr>
-    <tr>
         <td>FED</td>
         <td>0.128</td>
         <td>0.120</td>
@@ -1000,6 +1335,13 @@ All values are statistically significant to p-value < 0.05, unless marked by *.
         <td>0.140</td>
         <td>0.907</td>
         <td>0.900</td>
+    </tr>
+    <tr>
+        <td>FBD</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-0.669</td>
+        <td>-0.627</td>
     </tr>
 
 </table>

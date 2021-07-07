@@ -153,11 +153,12 @@ dmypy.json
 *.ckpt
 *.pkl
 *.backup
+*.pth
 
 # tf file
 *.tfrecord
 
-# metric specifics
+# metric models
 
 bleurt/bleurt-tiny-512
 
@@ -174,3 +175,12 @@ ruber_and_bert_ruber/BERT-RUBER/bert_model
 ruber_and_bert_ruber/BERT-RUBER/DailyDialogue-Parser
 
 usr_fed/usr/pretrained_models/
+
+deb/deb_trained_on_rand_and_adv_neg
+
+dialogrpt/restore
+dialogrpt/test_data
+
+questeval/models
+
+usl_dialog_metric/dailydialog
