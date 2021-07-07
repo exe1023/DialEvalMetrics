@@ -1,0 +1,10 @@
+
+*.pyc
+*.pth
+out/
+data/
+.vscode/
+test/
+doc/arxiv/
+model_card/
+
