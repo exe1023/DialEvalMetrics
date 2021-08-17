@@ -15,9 +15,15 @@ Each directory in `conda_envs` holds an environment specification. Please instal
 Take the installation of `conda_envs/eval_base` for example, please run
 
 ```
-conda create --name eval_base --file conda_envs/eval_base/spec_file.txt
-conda env update --name eval_base --file conda_envs/eval_base/environment.yml
+conda env create -f conda_envs/eval_base/environment.yml
 ```
+
+Note that there are some packages could not be installed via this method. 
+
+If you want find any packages such as bleurt, nlg-eval, and packages downloaded by spaCy are missing, please install it with official instructions.
+
+We apologize for any inconvenience.
+
 
 
 ## Data Preparation
@@ -78,7 +84,7 @@ We also provide a script we used to run bert-as-service `run_bert_as_service.sh`
 
 We used a web server for running USR and FED in our experiments.
 
-Please run `usr_fed/usr/usr_server.py` and `usr_fed/fed/fed_server.py` to start the server, and modify the path in `usr_fed_metric.py`.
+Please modify path in `usr_fed/usr/usr_server.py` and `usr_fed/fed/fed_server.py` to start the server, and modify the path in `usr_fed_metric.py`.
 
 
 ## How to evaluate
