@@ -1,5 +1,6 @@
 name: flow_eval
 channels:
+  - pytorch
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
@@ -51,7 +52,7 @@ dependencies:
     - six==1.16.0
     - tokenizers==0.8.1rc1
     - toml==0.10.2
-    - torch==1.7.1+cu110
+    - torch==1.7.1
     - tqdm==4.60.0
     - traitlets==4.3.3
     - transformers==3.0.2
@@ -59,4 +60,3 @@ dependencies:
     - urllib3==1.26.4
     - wcwidth==0.2.5
     - zipp==3.4.1
-prefix: /usr0/home/yitingye/miniconda3/envs/flow_eval

@@ -75,7 +75,7 @@ dependencies:
     - threadpoolctl==2.1.0
     - tokenizers==0.10.1
     - toml==0.10.2
-    - torch==1.8.0+cu111
+    - torch==1.8.0
     - tqdm==4.42.1
     - traitlets==5.0.5
     - transformers==4.4.2
@@ -83,4 +83,3 @@ dependencies:
     - urllib3==1.26.3
     - wcwidth==0.2.5
     - zipp==3.4.1
-prefix: /usr0/home/yitingye/miniconda3/envs/hostilic_eval

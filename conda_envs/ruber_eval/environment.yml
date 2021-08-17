@@ -104,7 +104,7 @@ dependencies:
     - tensorflow-estimator==1.15.1
     - termcolor==1.1.0
     - tokenizers==0.10.1
-    - torch==1.7.1+cu110
+    - torch==1.7.1
     - tqdm==4.57.0
     - traitlets==4.3.3
     - transformers==4.3.3
@@ -115,4 +115,3 @@ dependencies:
     - werkzeug==1.0.1
     - wrapt==1.12.1
     - zipp==3.4.0
-prefix: /usr0/home/yitingye/miniconda3/envs/ruber_eval

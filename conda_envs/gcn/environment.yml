@@ -100,7 +100,7 @@ dependencies:
     - tifffile==2020.9.3
     - tokenizers==0.8.1rc2
     - toml==0.10.2
-    - torch==1.9.0+cu111
+    - torch==1.9.0
     - torch-cluster==1.5.9
     - torch-geometric==1.7.1
     - torch-scatter==2.0.7
@@ -113,4 +113,3 @@ dependencies:
     - urllib3==1.26.5
     - wcwidth==0.2.5
     - zipp==3.4.1
-prefix: /usr0/home/yitingye/miniconda3/envs/gcn

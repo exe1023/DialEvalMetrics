@@ -83,7 +83,7 @@ dependencies:
     - termcolor==1.1.0
     - texar-pytorch==0.1.0
     - tokenizers==0.8.1rc2
-    - torch==1.7.1+cu110
+    - torch==1.7.1
     - torchvision==0.3.0
     - tqdm==4.46.0
     - transformers==3.1.0
@@ -92,4 +92,3 @@ dependencies:
     - werkzeug==1.0.1
     - wrapt==1.12.1
     - zipp==3.4.0
-prefix: /usr0/home/yitingye/miniconda3/envs/grade_eval

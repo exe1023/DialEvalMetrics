@@ -80,7 +80,7 @@ dependencies:
     - thinc==8.0.5
     - tokenizers==0.8.0rc4
     - toml==0.10.2
-    - torch==1.9.0+cu111
+    - torch==1.9.0
     - tqdm==4.61.1
     - transformers==3.0.1
     - typer==0.3.2
@@ -91,4 +91,3 @@ dependencies:
     - xx-ent-wiki-sm==3.0.0
     - xxhash==2.0.2
     - zipp==3.4.1
-prefix: /usr0/home/yitingye/miniconda3/envs/questeval

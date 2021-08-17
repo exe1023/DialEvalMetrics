@@ -1,5 +1,6 @@
 name: dialogrpt
 channels:
+  - pytorch
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
@@ -53,10 +54,9 @@ dependencies:
     - scipy==1.5.2
     - six==1.15.0
     - smmap2==2.0.3
-    - torch==1.9.0+cu111
+    - torch==1.9.0
     - tqdm==4.48.2
     - typing-extensions==3.10.0.0
     - urllib3==1.25.10
     - websocket-client==1.1.0
     - wincertstore==0.2
-prefix: /usr0/home/yitingye/miniconda3/envs/dialogrpt
